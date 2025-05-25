@@ -40,13 +40,15 @@
 
 
 
+
+
     
     .container-flex a {
       margin-top: 10px;
          margin-left: auto;
     margin-right: auto;
         font-size: 22px !important;
-    padding: 0; /* مقدار padding به جای auto باید عدد یا مقدار معتبر باشد */
+    padding: 0; 
     }
   }
 </style>
