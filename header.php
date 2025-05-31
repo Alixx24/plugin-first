@@ -59,4 +59,27 @@
         <a href="#">Contact</a>
         <a href="#">Bloh</a>
 
+        <!-- بارگذاری Alpine.js -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<div x-data="{ open: false }" class="relative inline-block">
+    <a href="3" class="courses-header"
+       @click.prevent="open = !open"         
+       @click.outside="open = false"          
+       @keyup.escape.window="open = false"   
+       tabindex="0"                         
+    >courses</a>
+
+    <!-- منوی dropdown -->
+    <div x-show="open" 
+         x-transition
+         class="absolute bg-white border mt-1 rounded shadow-lg"
+         style="min-width: 150px;"
+         @click.outside="open = false">
+        <a href="#course1" class="block px-4 py-2 hover:bg-gray-100">Course 1</a>
+        <a href="#course2" class="block px-4 py-2 hover:bg-gray-100">Course 2</a>
+        <a href="#course3" class="block px-4 py-2 hover:bg-gray-100">Course 3</a>
+    </div>
+</div>
+
     </div>
