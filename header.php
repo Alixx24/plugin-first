@@ -57,13 +57,21 @@
 
 
   /* new */
-  .nav-container {
 
-  
+.nav-container {
+  background-color: #867ae9; /* اگر می‌خواهید رنگ پس‌زمینه داشته باشد */
   display: flex;
-  justify-content:center;
- 
+  justify-content: center;
+
 }
+
+nav {
+    margin: auto !important;
+  padding: auto;
+}
+
+
+
   * {
     padding: 0;
     margin: 0;
@@ -74,10 +82,6 @@
     font-family: sans-serif;
   }
 
-
-  nav {
-    float: right;
-  }
 
   nav ul {
     list-style: none;
@@ -173,6 +177,7 @@
   @media screen and (min-width: 799px) {
     .nav-list {
       display: block !important;
+      
     }
   }
 
@@ -250,7 +255,7 @@
 
   <section class="navigation">
     <div class="nav-container">
-   
+
       <nav x-data="dropdown">
         <div class="nav-mobile">
           <a id="nav-toggle" href="#!" @clicl="toggle">
@@ -262,7 +267,7 @@
 
 
 
-        <ul class="nav-list" x-cloak x-show="open" x-transition.duration.200ms.opacity.scale.origin.top>
+        <ul class="nav-list" x-cloak x-show="open" x-transition.duration.200ms.opacity.scale.origin.top style="">
           <li>
             <a href="#!">Home</a>
           </li>
@@ -309,20 +314,11 @@
   </section>
 
   <script>
-
-
-
-
-
-
-
-
-
- document.addEventListener('alpine:init', () => {
-     Alpine.data('dropdown', () => ({
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('dropdown', () => ({
         open: false,
 
-        toggle(){
+        toggle() {
           this.open = !this.open
         }
       }))
