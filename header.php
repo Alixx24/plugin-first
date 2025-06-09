@@ -31,6 +31,8 @@
 
 
 
+
+
   @media (max-width: 600px) {
     .container-flex {
       height: auto;
@@ -53,6 +55,8 @@
 
 
 
+
+  
 
 
 
